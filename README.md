@@ -1,7 +1,7 @@
 # nexton-challenge-backend
-CALCULATOR API
-typescript-node-challenge
-Example Node.js API with TypeScript setup
+CALCULATOR API | 
+typescript-node-challenge | 
+Node.js API with TypeScript setup
 
 How to use
 Git clone this repo

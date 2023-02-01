@@ -14,6 +14,9 @@
 2. Run `npm i ts-node -g`
 3. Run `npm i nodemon -g`
 
+## Create a `.env` file with this variable:
+
+- `PORT=3000`
 
 ## Scripts
 

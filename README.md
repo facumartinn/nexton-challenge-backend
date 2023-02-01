@@ -10,5 +10,5 @@
 
 ## Scripts
 
-- `npm start`: start directly the TypeScript code for development
+- `npm run dev`: start directly the TypeScript code for development
 - `npm run test`: run unit tests using jest

@@ -22,7 +22,7 @@ const parsePlus = (operation:string) => {
     const initialValue = 0.0;
     const result = operationTerm.reduce((acc, no) => acc + no, initialValue);
     return result;
-};
+}
 
 // Parse the expression that matches the - operator and perform the operation.
 const parseMinus = (operation:string) => {
@@ -31,7 +31,7 @@ const parseMinus = (operation:string) => {
     const initialValue = operationTerm[0];
     const result = operationTerm.slice(1).reduce((acc, no) => acc - no, initialValue);
     return result;
-};
+}
 
 // Parse the expression that matches the "/" operator and perform the operation.
 const parseDivision = (operation:string) => {
@@ -40,7 +40,7 @@ const parseDivision = (operation:string) => {
     const initialValue = operationTerm[0];
     const result = operationTerm.slice(1).reduce((acc, no) => acc / no, initialValue);
     return result;
-};
+}
 
 // Parse the expression that matches the "*" operator and perform the operation.
 const parseMultiply = (operation:string) => {
@@ -49,9 +49,19 @@ const parseMultiply = (operation:string) => {
 	const initialValue = 1.0;
 	const result = operationTerm.reduce((acc, no) => acc * no, initialValue);
 	return result;
-};
+}
 
-export const parseAndCalculate = (operation:string) => {
+const parseAndCalculate = (operation:string) => {
     const finalOperation = calcValueInsideTerm(operation);
     return parsePlus(finalOperation);
 }
+
+// Check if the operation has invalid separators
+const hasNotAllowedTermSeparator = (operation:string) => {
+    if (operation.includes("{") || operation.includes("[")) {
+        return {message: "Separator not allowed."}
+    }
+    return false;
+};
+
+export { parseAndCalculate, hasNotAllowedTermSeparator };

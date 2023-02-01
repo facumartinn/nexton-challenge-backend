@@ -22,3 +22,8 @@
 
 - Run `npm run dev`: start directly the TypeScript code for development
 - Run `npm run test`: run unit tests using jest
+
+## Endpoint example:
+
+- POST - Calculator:
+`curl -X POST "http://localhost:3000/calculator" -H 'Content-Type: application/json' -d '{"operation": "10 * (2 + 5) * 10"}'`

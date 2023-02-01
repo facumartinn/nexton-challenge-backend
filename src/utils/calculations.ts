@@ -52,6 +52,6 @@ const parseMultiply = (operation:string) => {
 };
 
 export const parseAndCalculate = (operation:string) => {
-    const result = parsePlus(operation);
-    return result;
+    const finalOperation = calcValueInsideTerm(operation);
+    return parsePlus(finalOperation);
 }

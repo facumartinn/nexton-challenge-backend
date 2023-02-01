@@ -3,10 +3,8 @@ import { calcValueInsideTerm, parseAndCalculate } from "../utils/calculations";
 
 const calculateOperation = ({body}: Request, res: Response) => {
     let { operation } = body;
-    // Obtain the new operation without parentheses.
-    let newOperation = calcValueInsideTerm(operation);
-    // Pass the new operation and calculate the result.
-    const result = parseAndCalculate(newOperation);
+    // Pass the operation and calculate the result.
+    const result = parseAndCalculate(operation);
     res.status(200).send({result: result});
 };
 

@@ -8,13 +8,14 @@
 1. Git clone this repo
 2. Run `npm install`
 
-## Make sure you have Typescript and ts-node installed globally. If not:
+## Make sure you have Typescript, ts-node and nodemon installed globally. If not:
 
 1. Run `npm i typescript -g`
-2. Run ``npm i ts-node -g
+2. Run `npm i ts-node -g`
+3. Run `npm i nodemon -g`
 
 
 ## Scripts
 
-- `npm run dev`: start directly the TypeScript code for development
-- `npm run test`: run unit tests using jest
+- Run `npm run dev`: start directly the TypeScript code for development
+- Run `npm run test`: run unit tests using jest

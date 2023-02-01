@@ -1,13 +1,13 @@
 import { Request, Response } from "express";
-import { calcValueInsideTerm } from "../utils/termSeparation";
+import { calcValueInsideTerm, parseAndCalculate } from "../utils/calculations";
 
 const calculateOperation = ({body}: Request, res: Response) => {
     let { operation } = body;
+    // Obtain the new operation without parentheses.
     let newOperation = calcValueInsideTerm(operation);
-    if (newOperation) {
-        const result = eval(newOperation);
-        res.status(200).send({result: result});
-    }
+    // Pass the new operation and calculate the result.
+    const result = parseAndCalculate(newOperation);
+    res.status(200).send({result: result});
 };
 
 export { calculateOperation };
